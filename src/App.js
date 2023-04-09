@@ -12,15 +12,13 @@ function App() {
   };
 
   function LightHandler() {
-    useEffect(() => {
-      setTimeout(toggleLight, 3000);
-    });
+    setInterval(toggleLight, 1000);
   }
 
   return (
     <>
       <ThemeContext.Provider value={lightSwitch}>
-        <button onClick={LightHandler()}>Toggle</button>
+        <button onClick={LightHandler}>Toggle</button>
         <TrafficLightsVert />
         <TrafficLightsHori />
       </ThemeContext.Provider>
